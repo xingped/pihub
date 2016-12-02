@@ -1,0 +1,20 @@
+{
+  "name": "pihub",
+  "version": "0.0.1",
+  "description": "Interface for file transfer between USB drives",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "preinstall": "",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "onoff": "^1.1.1",
+    "pitft": "~0.0.11"
+  },
+  "engines": {
+    "node": "0.10.22"
+  }
+}
