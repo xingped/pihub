@@ -1,4 +1,4 @@
-FROM resin/%%RESIN_MACHINE_NAME%%-node:slim
+FROM resin/raspberrypi-node:slim
 
 # use apt-get if you need to install dependencies,
 RUN apt-get update && apt-get install -yq \
