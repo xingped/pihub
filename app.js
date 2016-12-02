@@ -4,6 +4,8 @@ var button22 = new Gpio(15, 'in', 'both');
 var button23 = new Gpio(16, 'in', 'both');
 var button27 = new Gpio(13, 'in', 'both');
 
+var button232 = new Gpio(23, 'in', 'both');
+
 button17.watch(function(err, val) {
 	if(err) throw err;
 	console.log('btn17', val);
@@ -22,6 +24,11 @@ button23.watch(function(err, val) {
 button27.watch(function(err, val) {
 	if(err) throw err;
 	console.log('btn27', val);
+});
+
+button232.watch(function(err, val) {
+	if(err) throw err;
+	console.log('btn232', val);
 });
 
 process.on('SIGINT', function() {
