@@ -1,14 +1,34 @@
 var Gpio = require('onoff').Gpio;
-var button = new Gpio(11, 'in', 'both');
+var button17 = new Gpio(11, 'in', 'both');
+var button22 = new Gpio(15, 'in', 'both');
+var button23 = new Gpio(16, 'in', 'both');
+var button27 = new Gpio(13, 'in', 'both');
 
-button.watch(function(err, val) {
-	if(err) {
-		throw err;
-	}
+button17.watch(function(err, val) {
+	if(err) throw err;
+	console.log('btn17', val);
+});
 
-	console.log('button pressed', val);
+button22.watch(function(err, val) {
+	if(err) throw err;
+	console.log('btn22', val);
+});
+
+button23.watch(function(err, val) {
+	if(err) throw err;
+	console.log('btn23', val);
+});
+
+button27.watch(function(err, val) {
+	if(err) throw err;
+	console.log('btn27', val);
 });
 
 process.on('SIGINT', function() {
-	button.unexport();
+	button17.unexport();
+	button22.unexport();
+	button23.unexport();
+	button27.unexport();
 });
+
+console.log('started');
